@@ -1,27 +1,36 @@
-print("Sveika, pasaule!")
-print("Šodien ir forša diena!")
-print()
+# Konstantes
+vards       = "Nils"
+dzejolis    = [
+    "Ai jel, manu vieglu prātu,",
+    "Jauns apņēmu līgaviņ`.",
+    "Ne gadiņa nedzīvoju,",
+    "Sola kungi karā ņemt."
+]
 
-print("piens kefirs sviests biezpiens krejums")
-print("piens kefirs","sviests","biezpiens","krejums")
-print("piens kefirs","sviests","biezpiens krejums", sep = "*")
+# Printējam vārdu
+print(vards)
 
-# Uzskaitījums
-# TODO: Pabeigt rakstīt dzeju
-'''
-Šis ir garš komentārs
-Pa vairākām
-rindiņām
-'''
-print("berzs, ozols, osis, egle", end = "=====") # Šis ir komentārs
-print("lacis, \t kakis,\n suns, zurka") # Vēl viens komentārs
+# Ejam cauri dzejoļa masīvam
+cikls = 0
+for rindina in dzejolis:
+    if (cikls % 2 != 0):
+        atstarpe = "  "
+    else:
+        atstarpe = ""
 
-print("Gribu ātrāk siltu laiku.")
-print("Gribu ātrāk siltu laiku.")
-print("Gribu ātrāk siltu laiku.")
-# print("Gribu ātrāk siltu laiku.") Aizkomentē ar Ctrl + /
-# print("Gribu ātrāk siltu laiku.")
-# print("Gribu ātrāk siltu laiku.")
-# print("Gribu ātrāk siltu laiku.")
-print("Gribu ātrāk siltu laiku.")
-print("Gribu ātrāk siltu laiku.")
+    print(atstarpe + rindina)
+    cikls += 1
+
+# Izprintējam dzejoli
+print(*dzejolis, sep = "\n")
+
+# Ak, eglīte
+zvaigznes = 6
+for zvaigzne in range(zvaigznes):
+    print(" " * (zvaigznes - (zvaigzne + 1)),'*' * (2 * zvaigzne + 1))
+
+# Trijstūri
+augstums = 3
+for linija in range(augstums):
+    print(" " * (augstums - (linija + 1)),'*' * (2 * linija + 1), sep = "\t\t")
+    print(" " * (augstums - (linija + 1)),'*' * (2 * linija + 1))
