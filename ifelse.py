@@ -52,7 +52,7 @@ while True:
         options = Options()
         options.add_argument("--headless")
         print("Lūdzu uzgaidiet, iegūstam informāciju no Latvijas Gāzes…")
-        driver = webdriver.Chrome('chromedriver', options=options)
+        driver = webdriver.Chrome("chromedriver", options=options)
         url = "https://lg.lv/majoklim/tarifi-un-kalkulators"
         driver.get(url)
 
