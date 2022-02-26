@@ -20,10 +20,10 @@ izvele = izvelne()
 while True:
     if izvele == "1":
         vards = input("Ievadi savu vārdu: ")
-        if (vards == "Bond"):
+        if (vards.casefold() == "Bond".casefold()):
             print("Esi sveicināts, 007!")
         else:
-            print("Sveicināti,", vards + "!")
+            print("Sveicināti,", vards.upper() + "!")
         izvele = izvelne(True)
     
     elif izvele == "2":
