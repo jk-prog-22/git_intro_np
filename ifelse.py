@@ -51,10 +51,10 @@ while True:
         kWh = int(input('Ievadi kWh: '))
         options = Options()
         options.add_argument("--headless")
+        print("Lūdzu uzgaidiet, iegūstam informāciju no Latvijas Gāzes…")
         driver = webdriver.Chrome('chromedriver', options=options)
         url = "https://lg.lv/majoklim/tarifi-un-kalkulators"
         driver.get(url)
-        print("Lūdzu uzgaidiet, iegūstam informāciju…")
 
         # izvēlamies kWh dropdownā
         dropdown = driver.find_element_by_xpath("/html/body/div/div[2]/main/div[4]/div/div[1]/div[3]/div[1]/div[5]/div[2]/select")
@@ -66,6 +66,7 @@ while True:
 
         rezultats = driver.find_element_by_xpath("/html/body/div[2]/div[2]/main/div[4]/div/div[1]/div[4]/div[2]/div[1]/div[1]").text
         print("Jūsu izmaksas būtu", rezultats, "EUR/mēn.")
+        izvele = izvelne(True)
 
     elif izvele == 'x':
         break
