@@ -1,4 +1,5 @@
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 # brew install chromedriver
 # spctl --add --label 'Approved' /usr/local/bin/chromedriver
 
@@ -48,9 +49,12 @@ while True:
     
     elif izvele == '4':
         kWh = int(input('Ievadi kWh: '))
-        driver = webdriver.Chrome()
+        options = Options()
+        options.add_argument("--headless")
+        driver = webdriver.Chrome('chromedriver', options=options)
         url = "https://lg.lv/majoklim/tarifi-un-kalkulators"
         driver.get(url)
+        print("Lūdzu uzgaidiet, iegūstam informāciju…")
 
         # izvēlamies kWh dropdownā
         dropdown = driver.find_element_by_xpath("/html/body/div/div[2]/main/div[4]/div/div[1]/div[3]/div[1]/div[5]/div[2]/select")
