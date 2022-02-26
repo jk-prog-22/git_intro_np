@@ -13,11 +13,7 @@ print(vards)
 # Ejam cauri dzejoļa masīvam
 cikls = 0
 for rindina in dzejolis:
-    if (cikls % 2 != 0):
-        atstarpe = "  "
-    else:
-        atstarpe = ""
-
+    atstarpe = " " * cikls
     print(atstarpe + rindina)
     cikls += 1
 
@@ -32,5 +28,4 @@ for zvaigzne in range(zvaigznes):
 # Trijstūri
 augstums = 3
 for linija in range(augstums):
-    print(" " * (augstums - (linija + 1)),'*' * (2 * linija + 1), sep = "\t\t")
-    print(" " * (augstums - (linija + 1)),'*' * (2 * linija + 1))
+    print(" " * (augstums - (linija + 1)) + "/" + " " * linija + "\\ \t" + "/" + " " * linija + "\\")
