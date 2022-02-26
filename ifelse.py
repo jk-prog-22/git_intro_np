@@ -60,8 +60,8 @@ while True:
         kWhweb = driver.find_element_by_xpath("/html/body/div[2]/div[2]/main/div[4]/div/div[1]/div[3]/div[1]/div[5]/div[1]/div[1]/input")
         kWhweb.send_keys(kWh)
 
-        rezultats = driver.find_element_by_xpath("/html/body/div[2]/div[2]/main/div[4]/div/div[1]/div[4]/div[2]/div[1]/div[1]")
-        print(rezultats)
+        rezultats = driver.find_element_by_xpath("/html/body/div[2]/div[2]/main/div[4]/div/div[1]/div[4]/div[2]/div[1]/div[1]").text
+        print("Jūsu izmaksas būtu", rezultats, "EUR/mēn.")
 
     elif izvele == 'x':
         break
